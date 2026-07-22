@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Sparkles, Check, ArrowRight, Clock, Gift } from "lucide-react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
@@ -111,10 +110,10 @@ export function PricingSection() {
                     className="flex-1"
                   >
                     <Button variant="secondary" size="lg" className="w-full" asChild>
-                      <Link href="#early-access">
+                      <a href="https://19f5fa36.kickoffpages.com/" target="_blank" rel="noopener noreferrer">
                         <Sparkles className="mr-1.5 h-4 w-4" />
                         Get Early Access
-                      </Link>
+                      </a>
                     </Button>
                   </motion.div>
                 </div>

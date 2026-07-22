@@ -70,10 +70,10 @@ export function Navbar() {
               <a href="https://forms.gle/p9pwFxEpWPxrKCDx8" target="_blank" rel="noopener noreferrer">Join Waitlist</a>
             </Button>
             <Button variant="primary" size="sm" asChild>
-              <Link href="/#early-access">
+              <a href="https://19f5fa36.kickoffpages.com/" target="_blank" rel="noopener noreferrer">
                 <Sparkles className="mr-1.5 h-3.5 w-3.5" />
                 Get Early Access
-              </Link>
+              </a>
             </Button>
           </div>
 

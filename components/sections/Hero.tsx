@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TypingAnimation } from "@/components/animations/TypingAnimation";
@@ -69,10 +68,10 @@ export function Hero() {
               whileTap={{ scale: 0.95 }}
             >
               <Button variant="primary" size="xl" asChild>
-                <Link href="#early-access">
+                <a href="https://19f5fa36.kickoffpages.com/" target="_blank" rel="noopener noreferrer">
                   Get Early Access
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                </a>
               </Button>
             </motion.div>
             <motion.div

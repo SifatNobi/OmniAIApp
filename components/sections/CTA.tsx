@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 
@@ -47,10 +46,10 @@ export function CTA() {
               whileTap={{ scale: 0.95 }}
             >
               <Button variant="secondary" size="xl" asChild>
-                <Link href="#early-access">
+                <a href="https://19f5fa36.kickoffpages.com/" target="_blank" rel="noopener noreferrer">
                   <Sparkles className="mr-2 h-4 w-4" />
                   Get Early Access
-                </Link>
+                </a>
               </Button>
             </motion.div>
           </div>
