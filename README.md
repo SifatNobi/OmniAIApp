@@ -8,20 +8,26 @@ OmniAIApp is an AI-native platform for Desktop and Android that unifies the worl
 
 ```
 omniapp/
-├── backend/       - Build infrastructure, shared configs, tooling
-└── frontend/      - Complete Next.js 15 application (self-contained)
+├── app/             - Next.js App Router pages & layouts
+├── components/      - React components (animations, layout, sections, ui)
+├── constants/       - Site data & configuration
+├── hooks/           - Custom React hooks
+├── lib/             - Utility functions
+├── types/           - TypeScript type definitions
+├── public/          - Static assets (SVGs, icons, images)
+├── styles/          - Style utilities
+├── backend/         - Build infrastructure, shared configs, tooling
+└── (config files)   - package.json, next.config.ts, tailwind.config.ts, etc.
 ```
 
 ## Quick Start
 
 ```bash
-# Frontend (the Next.js app)
-cd frontend
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000).
 
 ## Tech Stack
 
@@ -34,4 +40,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Deployment
 
-The `frontend/` directory is optimized for deployment on Vercel.
+Optimized for Vercel — auto-detects Next.js at the project root.
