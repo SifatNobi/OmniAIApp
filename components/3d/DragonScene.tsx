@@ -40,7 +40,7 @@ export function DragonScene() {
       aria-hidden="true"
     >
       <Canvas
-        camera={{ position: [0, 0.3, 5], fov: 40, near: 0.1, far: 20 }}
+        camera={{ position: [0, 1, 6], fov: 45, near: 0.1, far: 20 }}
         dpr={[1, 1.5]}
         gl={{
           antialias: true,
