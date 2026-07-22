@@ -18,18 +18,20 @@ export function TrustedSection() {
           </p>
         </ScrollReveal>
         <div className="relative overflow-hidden">
-          <div className="flex animate-marquee gap-16">
+          <motion.div
+            className="flex w-max"
+            animate={{ x: "-50%" }}
+            transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+          >
             {[...logos, ...logos].map((name, i) => (
-              <div
+              <span
                 key={i}
-                className="flex items-center justify-center"
+                className="mr-16 whitespace-nowrap text-lg font-semibold text-text-secondary/40 transition-colors hover:text-text-secondary/60"
               >
-                <span className="whitespace-nowrap text-lg font-semibold text-text-secondary/40 transition-colors hover:text-text-secondary/60">
-                  {name}
-                </span>
-              </div>
+                {name}
+              </span>
             ))}
-          </div>
+          </motion.div>
           <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-black to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-black to-transparent" />
         </div>

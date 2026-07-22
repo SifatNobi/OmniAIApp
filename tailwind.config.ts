@@ -31,7 +31,6 @@ const config: Config = {
         "glow": "glow 2s ease-in-out infinite alternate",
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "shimmer": "shimmer 2s linear infinite",
-        "marquee": "marquee 30s linear infinite",
         "typing": "typing 3.5s steps(40, end)",
         "fade-in": "fadeIn 0.5s ease-out",
         "slide-up": "slideUp 0.5s ease-out",
@@ -56,10 +55,6 @@ const config: Config = {
         shimmer: {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
-        },
-        marquee: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-50%)" },
         },
         fadeIn: {
           "0%": { opacity: "0" },
