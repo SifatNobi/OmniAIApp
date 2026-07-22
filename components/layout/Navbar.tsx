@@ -6,7 +6,8 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { navItems, siteConfig } from "@/constants";
+import { Logo } from "@/components/ui/logo";
+import { navItems } from "@/constants";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
@@ -38,21 +39,7 @@ export function Navbar() {
         )}
       >
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-accent-hover">
-                <Sparkles className="h-4 w-4 text-white" />
-              </div>
-              <motion.div
-                className="absolute -inset-1 rounded-lg bg-accent/20 blur-lg"
-                animate={{ opacity: [0.3, 0.6, 0.3] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-            </div>
-            <span className="text-lg font-semibold text-white">
-              {siteConfig.name}
-            </span>
-          </Link>
+          <Logo />
 
           <nav className="hidden items-center gap-1 md:flex">
             {navItems.map((item) => (

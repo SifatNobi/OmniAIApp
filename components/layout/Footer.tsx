@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Sparkles, Twitter, Facebook, MessageCircle, Instagram, Youtube } from "lucide-react";
+import { Twitter, Facebook, MessageCircle, Instagram, Youtube } from "lucide-react";
+import { Logo } from "@/components/ui/logo";
 import { siteConfig, navItems, socialLinks } from "@/constants";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -26,14 +27,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-accent-hover">
-                <Sparkles className="h-4 w-4 text-white" />
-              </div>
-              <span className="text-lg font-semibold text-white">
-                {siteConfig.name}
-              </span>
-            </Link>
+            <Logo />
             <p className="text-sm text-text-secondary">
               {siteConfig.tagline}
             </p>

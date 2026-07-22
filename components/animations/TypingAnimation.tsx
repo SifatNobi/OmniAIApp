@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 interface TypingAnimationProps {
   words: string[];
@@ -13,48 +13,40 @@ export function TypingAnimation({ words, className = "" }: TypingAnimationProps)
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const currentWord = words[currentIndex];
+  useEffect(() => {
+    const currentWord = words[currentIndex];
+    let timeout: NodeJS.Timeout;
 
-  const tick = useCallback(() => {
     if (!isDeleting) {
-      setDisplayText(currentWord.substring(0, displayText.length + 1));
-      if (displayText.length + 1 === currentWord.length) {
-        setTimeout(() => setIsDeleting(true), 2000);
-        return;
+      if (displayText.length < currentWord.length) {
+        timeout = setTimeout(() => {
+          setDisplayText(currentWord.substring(0, displayText.length + 1));
+        }, 100);
+      } else {
+        timeout = setTimeout(() => setIsDeleting(true), 2000);
       }
     } else {
-      setDisplayText(currentWord.substring(0, displayText.length - 1));
-      if (displayText.length - 1 === 0) {
+      if (displayText.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayText(currentWord.substring(0, displayText.length - 1));
+        }, 50);
+      } else {
         setIsDeleting(false);
         setCurrentIndex((prev) => (prev + 1) % words.length);
-        return;
       }
     }
-  }, [currentWord, displayText, isDeleting, words.length]);
 
-  useEffect(() => {
-    const timeout = setTimeout(tick, isDeleting ? 50 : 100);
     return () => clearTimeout(timeout);
-  }, [tick, isDeleting]);
+  }, [currentIndex, displayText, isDeleting, words]);
 
   return (
     <span className={className}>
-      <AnimatePresence mode="popLayout">
-        <motion.span
-          key={displayText}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="text-gradient"
-        >
-          {displayText}
-          <motion.span
-            animate={{ opacity: [1, 0] }}
-            transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-            className="inline-block w-[3px] h-[1em] bg-accent ml-1 align-middle"
-          />
-        </motion.span>
-      </AnimatePresence>
+      {displayText}
+      <motion.span
+        animate={{ opacity: [1, 0] }}
+        transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
+        className="inline-block w-[3px] h-[1em] bg-accent ml-1 align-middle"
+      />
     </span>
   );
 }
