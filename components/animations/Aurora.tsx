@@ -14,6 +14,13 @@ export function Aurora() {
 
     let animationFrameId: number;
     let time = 0;
+    let isVisible = true;
+
+    const handleVisibility = () => {
+      isVisible = !document.hidden;
+      if (isVisible) draw();
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
 
     const resize = () => {
       canvas.width = window.innerWidth;
@@ -24,6 +31,7 @@ export function Aurora() {
     window.addEventListener("resize", resize);
 
     const draw = () => {
+      if (!isVisible) return;
       time += 0.002;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -69,6 +77,7 @@ export function Aurora() {
     return () => {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener("resize", resize);
+      document.removeEventListener("visibilitychange", handleVisibility);
     };
   }, []);
 

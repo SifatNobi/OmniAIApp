@@ -99,10 +99,10 @@ export function PricingSection() {
                     className="flex-1"
                   >
                     <Button variant="primary" size="lg" className="w-full" asChild>
-                      <Link href="#waitlist">
+                      <a href="https://forms.gle/p9pwFxEpWPxrKCDx8" target="_blank" rel="noopener noreferrer">
                         Join Waitlist
                         <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
+                      </a>
                     </Button>
                   </motion.div>
                   <motion.div

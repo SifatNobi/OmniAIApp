@@ -80,7 +80,7 @@ export function Hero() {
               whileTap={{ scale: 0.95 }}
             >
               <Button variant="secondary" size="xl" asChild>
-                <Link href="#waitlist">Join Waitlist</Link>
+                <a href="https://forms.gle/p9pwFxEpWPxrKCDx8" target="_blank" rel="noopener noreferrer">Join Waitlist</a>
               </Button>
             </motion.div>
           </div>

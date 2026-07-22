@@ -36,10 +36,10 @@ export function CTA() {
               whileTap={{ scale: 0.95 }}
             >
               <Button variant="primary" size="xl" asChild>
-                <Link href="#waitlist">
+                <a href="https://forms.gle/p9pwFxEpWPxrKCDx8" target="_blank" rel="noopener noreferrer">
                   Join Waitlist
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                </a>
               </Button>
             </motion.div>
             <motion.div

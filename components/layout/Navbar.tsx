@@ -67,7 +67,7 @@ export function Navbar() {
 
           <div className="hidden items-center gap-3 md:flex">
             <Button variant="secondary" size="sm" asChild>
-              <Link href="/#waitlist">Join Waitlist</Link>
+              <a href="https://forms.gle/p9pwFxEpWPxrKCDx8" target="_blank" rel="noopener noreferrer">Join Waitlist</a>
             </Button>
             <Button variant="primary" size="sm" asChild>
               <Link href="/#early-access">
@@ -113,7 +113,7 @@ export function Navbar() {
               ))}
               <hr className="my-2 border-border" />
               <Button variant="secondary" size="default" asChild className="w-full">
-                <Link href="/#waitlist">Join Waitlist</Link>
+                <a href="https://forms.gle/p9pwFxEpWPxrKCDx8" target="_blank" rel="noopener noreferrer">Join Waitlist</a>
               </Button>
               <Button variant="primary" size="default" asChild className="w-full">
                 <Link href="/#early-access">

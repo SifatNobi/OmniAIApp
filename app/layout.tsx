@@ -4,11 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
-import { Aurora } from "@/components/animations/Aurora";
-import { Particles } from "@/components/animations/Particles";
-import { FloatingOrbs } from "@/components/animations/FloatingOrbs";
-import { MeshGradient } from "@/components/animations/MeshGradient";
-import { MouseSpotlight } from "@/components/animations/MouseSpotlight";
+import { BackgroundEffects } from "@/components/animations/BackgroundEffects";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -92,11 +88,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="min-h-screen bg-primary font-sans antialiased">
-        <Aurora />
-        <Particles count={40} />
-        <FloatingOrbs />
-        <MeshGradient />
-        <MouseSpotlight />
+        <BackgroundEffects />
         <ScrollProgress />
         <Navbar />
         <main className="relative z-10">{children}</main>
