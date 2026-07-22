@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" fill="none">
+  <rect width="192" height="192" rx="40" fill="url(#gradient)"/>
+  <path d="M96 36L126 66L96 96L66 66L96 36Z" fill="white" opacity="0.9"/>
+  <path d="M96 76L126 106L96 136L66 106L96 76Z" fill="white" opacity="0.7"/>
+  <path d="M96 116L126 146L96 176L66 146L96 116Z" fill="white" opacity="0.5"/>
+  <text x="96" y="160" text-anchor="middle" fill="white" font-size="36" font-family="system-ui" font-weight="bold">AI</text>
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="192" y2="192" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+</svg>

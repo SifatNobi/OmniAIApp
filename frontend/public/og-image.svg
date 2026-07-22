@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#000000"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.05"/>
+  <rect x="60" y="60" width="1080" height="510" rx="24" stroke="rgba(37,99,235,0.15)" stroke-width="2"/>
+  <circle cx="600" cy="315" r="250" fill="url(#glow)" opacity="0.4"/>
+  <path d="M480 250L540 310L480 370L420 310L480 250Z" fill="white"/>
+  <path d="M600 200L680 280L600 360L520 280L600 200Z" fill="url(#iconGrad)"/>
+  <path d="M600 310L640 350L600 390L560 350L600 310Z" fill="white" opacity="0.8"/>
+  <text x="600" y="290" text-anchor="middle" fill="white" font-size="72" font-family="system-ui" font-weight="bold">OmniAIApp</text>
+  <text x="600" y="350" text-anchor="middle" fill="#60A5FA" font-size="32" font-family="system-ui">One Platform. Every AI.</text>
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="iconGrad" x1="520" y1="200" x2="680" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+</svg>

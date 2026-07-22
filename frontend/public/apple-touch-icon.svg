@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180" fill="none">
+  <rect width="180" height="180" rx="36" fill="#2563EB"/>
+  <path d="M90 30L115 55L90 80L65 55L90 30Z" fill="white" opacity="0.9"/>
+  <path d="M90 70L115 95L90 120L65 95L90 70Z" fill="white" opacity="0.7"/>
+  <path d="M90 110L115 135L90 160L65 135L90 110Z" fill="white" opacity="0.5"/>
+  <text x="90" y="145" text-anchor="middle" fill="white" font-size="24" font-family="system-ui" font-weight="bold">AI</text>
+</svg>

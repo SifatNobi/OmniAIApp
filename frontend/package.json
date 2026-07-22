@@ -1,0 +1,40 @@
+{
+  "name": "omniapp-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "next": "^15.2.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "framer-motion": "^12.7.4",
+    "lucide-react": "^0.487.0",
+    "react-hook-form": "^7.54.2",
+    "@hookform/resolvers": "^5.0.1",
+    "zod": "^3.24.3",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.2.0",
+    "class-variance-authority": "^0.7.1",
+    "@radix-ui/react-accordion": "^1.2.3",
+    "@radix-ui/react-slot": "^1.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "tailwindcss": "^4.1.4",
+    "@tailwindcss/postcss": "^4.1.4",
+    "postcss": "^8.5.3",
+    "eslint": "^9.25.1",
+    "@eslint/eslintrc": "^3.3.1",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11"
+  }
+}
