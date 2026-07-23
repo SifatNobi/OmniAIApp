@@ -17,6 +17,7 @@ export const siteConfig = {
 };
 
 export const navItems: NavItem[] = [
+  { label: "Home", href: "/" },
   { label: "Features", href: "/features" },
   { label: "Marketplace", href: "/marketplace" },
   { label: "Pricing", href: "/pricing" },
