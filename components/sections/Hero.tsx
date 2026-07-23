@@ -5,7 +5,6 @@ import { Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TypingAnimation } from "@/components/animations/TypingAnimation";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
-import { GlobeBackground } from "@/components/3d/GlobeBackground";
 
 const typingWords = [
   "AI Models",
@@ -23,7 +22,7 @@ const typingWords = [
 export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
-      <GlobeBackground />
+      <div className="absolute inset-0 bg-grid-white" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 text-center sm:px-6">
         <ScrollReveal>
