@@ -5,7 +5,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { BackgroundEffects } from "@/components/animations/BackgroundEffects";
-import { LoadingScreen } from "@/components/ui/LoadingScreen";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -89,7 +88,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="min-h-screen bg-primary font-sans antialiased">
-        <LoadingScreen />
         <BackgroundEffects />
         <ScrollProgress />
         <Navbar />

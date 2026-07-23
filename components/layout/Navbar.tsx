@@ -27,21 +27,18 @@ export function Navbar() {
 
   return (
     <>
-        <motion.header
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
-          className={cn(
-            "fixed inset-x-0 top-0 z-50 transition-all duration-700",
-            isScrolled
-              ? "bg-black/85 backdrop-blur-2xl border-b border-border/80 shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
-              : "bg-gradient-to-b from-black/40 to-transparent"
-          )}
-        >
-          <div className={cn(
-            "mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-700",
-            isScrolled ? "h-14" : "h-16"
-          )}>
+      <motion.header
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 transition-all duration-500",
+          isScrolled
+            ? "bg-black/80 backdrop-blur-xl border-b border-border"
+            : "bg-transparent"
+        )}
+      >
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Logo />
 
           <nav className="hidden items-center gap-1 md:flex">
