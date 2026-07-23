@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { AnimatedIcon } from "@/components/ui/animated-icon";
+import { TiltCard } from "@/components/ui/tilt-card";
 import { features } from "@/constants";
 
 export function Features() {
@@ -24,8 +25,9 @@ export function Features() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {features.map((feature, i) => (
             <ScrollReveal key={feature.title} delay={i * 0.05}>
-              <motion.div
-                whileHover={{ y: -8, scale: 1.02 }}
+              <TiltCard
+                tiltDegree={6}
+                glareOpacity={0.08}
                 className="group glass-hover rounded-2xl border border-border bg-white/[0.02] p-6 transition-all duration-500"
               >
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
@@ -37,7 +39,7 @@ export function Features() {
                 <p className="text-sm leading-relaxed text-text-secondary">
                   {feature.description}
                 </p>
-              </motion.div>
+              </TiltCard>
             </ScrollReveal>
           ))}
         </div>

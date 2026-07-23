@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Star, TrendingUp, Flame, Download } from "lucide-react";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
+import { TiltCard } from "@/components/ui/tilt-card";
 import { marketplaceItems, marketplaceCategories } from "@/constants";
 import { cn } from "@/lib/utils";
 
@@ -74,13 +75,10 @@ export function MarketplaceSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                whileHover={{ y: -6 }}
                 className="glass-hover group relative overflow-hidden rounded-2xl border border-border bg-white/[0.02] p-5"
               >
+                <TiltCard tiltDegree={5} glareOpacity={0.06}>
                 <div className="mb-3 flex items-start justify-between">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10">
-                    <div className="h-5 w-5 rounded-lg bg-accent/30" />
-                  </div>
                   <div className="flex gap-1">
                     {item.featured && (
                       <span className="rounded-full bg-accent/20 px-2 py-0.5 text-[10px] font-medium text-accent">
@@ -113,6 +111,7 @@ export function MarketplaceSection() {
                     {item.category}
                   </span>
                 </div>
+                </TiltCard>
               </motion.div>
             ))}
           </AnimatePresence>
