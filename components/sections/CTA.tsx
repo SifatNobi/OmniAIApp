@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
+import { OmniHeroBackground } from "@/components/3d/OmniHeroBackground";
 
 export function CTA() {
   return (
     <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[150px]" />
+      <OmniHeroBackground variant="pricing" />
+      <div className="absolute inset-0 pointer-events-none z-[2]">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/10 to-transparent backdrop-blur-[2px]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
